@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F8F3EA;
+  --color-warm-sand: #D8C7AE;
+  --color-olive-gray: #8A8B76;
+  --color-deep-brown: #3D332A;
+  --color-soft-rose: #D8B9AA;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #F8F3EA;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  color: #3D332A;
+  background:
+    linear-gradient(90deg, rgba(216, 199, 174, 0.18) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(216, 199, 174, 0.14) 1px, transparent 1px),
+    #F8F3EA;
+  background-size: 100% 100%, 100% 12rem, auto;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+}
+
+::selection {
+  color: #F8F3EA;
+  background: #3D332A;
+}

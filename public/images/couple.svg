@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Александр и Юлия</title>
+  <desc id="desc">Editorial illustration of a couple in a warm wedding landscape.</desc>
+  <rect width="900" height="1125" fill="#D8C7AE"/>
+  <path d="M0 752c128-70 277-87 448-50 154 34 305 22 452-36v459H0Z" fill="#F8F3EA"/>
+  <circle cx="690" cy="250" r="128" fill="#F8F3EA" opacity=".72"/>
+  <path d="M274 760c12-182 64-302 156-360 94 61 144 181 151 360Z" fill="#3D332A"/>
+  <path d="M184 774c17-168 77-283 181-345 95 72 142 187 140 345Z" fill="#F8F3EA"/>
+  <circle cx="364" cy="325" r="77" fill="#D8B9AA"/>
+  <circle cx="524" cy="330" r="76" fill="#D8B9AA"/>
+  <path d="M289 328c27-84 86-126 176-126 41 0 77 9 108 28-61 6-111 30-151 73-37 40-82 48-133 25Z" fill="#3D332A"/>
+  <path d="M467 316c29-70 86-105 171-105 28 0 54 5 78 14-36 18-65 47-88 86-36 61-90 63-161 5Z" fill="#3D332A"/>
+  <path d="M216 772h417v82H216z" fill="#8A8B76"/>
+  <path d="M186 854h505v84H186z" fill="#D8B9AA"/>
+  <path d="M132 938h638v187H132z" fill="#3D332A"/>
+</svg>

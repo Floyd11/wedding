@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Цветовая палитра</title>
+  <desc id="desc">Wedding palette with ivory, warm sand, olive gray, deep brown and soft rose.</desc>
+  <rect width="900" height="675" fill="#F8F3EA"/>
+  <circle cx="205" cy="250" r="104" fill="#F8F3EA" stroke="#D8C7AE" stroke-width="3"/>
+  <circle cx="345" cy="250" r="104" fill="#D8C7AE"/>
+  <circle cx="485" cy="250" r="104" fill="#8A8B76"/>
+  <circle cx="625" cy="250" r="104" fill="#3D332A"/>
+  <circle cx="765" cy="250" r="104" fill="#D8B9AA"/>
+  <path d="M96 475h708v2H96z" fill="#D8C7AE"/>
+  <text x="450" y="536" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="28" fill="#3D332A">ivory · sand · olive · brown · rose</text>
+</svg>

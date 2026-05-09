@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 962" role="img" aria-labelledby="title desc">
+  <title id="title">Французская усадьба в Далате</title>
+  <desc id="desc">A soft editorial illustration of a French estate surrounded by pine forest.</desc>
+  <rect width="1400" height="962" fill="#8A8B76"/>
+  <path d="M0 555c168-108 346-150 535-124 210 28 377-15 511-129 137-116 255-152 354-108v768H0Z" fill="#D8C7AE"/>
+  <path d="M156 342 91 555h130Zm124-58-76 271h152Zm877 43-65 228h130Zm108-65-78 293h155Z" fill="#3D332A" opacity=".72"/>
+  <path d="M427 520h532v278H427z" fill="#F8F3EA"/>
+  <path d="m385 526 309-223 306 223Z" fill="#3D332A"/>
+  <path d="M520 592h96v206h-96zm264 0h96v206h-96z" fill="#D8B9AA"/>
+  <path d="M647 624h108v174H647z" fill="#8A8B76"/>
+  <path d="M461 552h464v31H461z" fill="#D8C7AE"/>
+  <path d="M0 780c223-60 443-72 660-35 269 46 516 30 740-50v267H0Z" fill="#F8F3EA"/>
+</svg>

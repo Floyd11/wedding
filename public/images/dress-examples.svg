@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Примеры дресс-кода</title>
+  <desc id="desc">Minimal silhouettes of summer wedding outfits in the selected palette.</desc>
+  <rect width="900" height="675" fill="#F8F3EA"/>
+  <path d="M188 176c42 0 76 34 76 76s-34 76-76 76-76-34-76-76 34-76 76-76Z" fill="#D8B9AA"/>
+  <path d="M124 354h128l58 236H66Z" fill="#8A8B76"/>
+  <path d="M462 182c39 0 71 32 71 71s-32 71-71 71-71-32-71-71 32-71 71-71Z" fill="#D8C7AE"/>
+  <path d="M387 349h150v82H387z" fill="#3D332A"/>
+  <path d="M403 431h45v162h-45zm73 0h45v162h-45z" fill="#8A8B76"/>
+  <path d="M711 176c42 0 76 34 76 76s-34 76-76 76-76-34-76-76 34-76 76-76Z" fill="#D8C7AE"/>
+  <path d="M646 354h130l56 236H590Z" fill="#D8B9AA"/>
+  <path d="M97 594h716" stroke="#D8C7AE" stroke-width="4"/>
+</svg>
