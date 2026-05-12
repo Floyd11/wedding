@@ -12,7 +12,7 @@ export function GiftSection() {
     <AnimatedSection className="relative px-5 py-20 sm:py-28">
       <div className="mx-auto max-w-3xl text-center">
         <SectionHeading title={gifts.title} />
-        <Reveal as="p" className="mt-8 text-xl leading-9 text-deep-brown/75">
+        <Reveal as="p" className="mt-8 text-xl leading-9 text-black/75">
           {gifts.body}
         </Reveal>
         <div className="mt-12 text-left shadow-[0_22px_70px_rgba(61,51,42,0.07)]">

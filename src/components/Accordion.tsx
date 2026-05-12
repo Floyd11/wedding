@@ -13,7 +13,7 @@ export function Accordion({ title, children }: AccordionProps) {
     <div className="border-y border-warm-sand/70 bg-ivory/45 px-1">
       <button
         type="button"
-        className="flex w-full items-center justify-between gap-6 py-5 text-left text-base font-semibold text-deep-brown transition hover:text-olive-gray focus:outline-none focus-visible:ring-2 focus-visible:ring-olive-gray focus-visible:ring-offset-4 focus-visible:ring-offset-ivory"
+        className="flex w-full items-center justify-between gap-6 py-5 text-left text-base font-semibold text-black transition hover:text-olive-gray focus:outline-none focus-visible:ring-2 focus-visible:ring-olive-gray focus-visible:ring-offset-4 focus-visible:ring-offset-ivory"
         aria-expanded={isOpen}
         aria-controls={contentId}
         onClick={() => setIsOpen((current) => !current)}

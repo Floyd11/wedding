@@ -22,12 +22,12 @@ export function ScheduleSection() {
                 className="absolute -left-[2.08rem] top-2 h-4 w-4 rounded-full border border-soft-rose bg-ivory sm:-left-[3.05rem]"
                 aria-hidden="true"
               />
-              <div className="grid gap-2 border-b border-warm-sand/55 pb-6 sm:grid-cols-[10rem_1fr]">
-                <time className="font-serif text-2xl text-deep-brown">{item.time}</time>
+              <div className="grid gap-2 border-b border-warm-sand/55 pb-6 sm:grid-cols-[10rem_1fr] items-center">
+                <time className="font-serif text-2xl text-black">{item.time}</time>
                 {item.text ? (
-                  <span className="text-lg leading-8 text-deep-brown/75">{item.text}</span>
+                  <span className="font-serif text-2xl leading-relaxed text-black">{item.text}</span>
                 ) : (
-                  <span className="text-lg leading-8 text-olive-gray">день свадьбы</span>
+                  <span className="font-serif text-2xl leading-relaxed text-olive-gray">день свадьбы</span>
                 )}
               </div>
             </Reveal>

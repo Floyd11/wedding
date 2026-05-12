@@ -109,15 +109,15 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
       <div className="absolute right-0 top-0 hidden h-full w-px bg-warm-sand/55 sm:block" aria-hidden="true" />
       <div className="mx-auto max-w-3xl">
         <SectionHeading title={rsvp.title} />
-        <p className="mt-6 text-center text-lg text-deep-brown/70">{rsvp.deadline}</p>
+        <p className="mt-6 text-center font-serif text-2xl leading-relaxed text-black">{rsvp.deadline}</p>
 
         <div className="relative mt-12 border border-warm-sand/70 bg-ivory/85 p-5 shadow-[0_30px_90px_rgba(61,51,42,0.12)] backdrop-blur sm:p-8">
           <div className="absolute -left-3 -top-3 h-14 w-14 border-l border-t border-soft-rose" aria-hidden="true" />
           <div className="absolute -bottom-3 -right-3 h-14 w-14 border-b border-r border-soft-rose" aria-hidden="true" />
           {isSubmitted ? (
             <div className="text-center" role="status" aria-live="polite">
-              <p className="font-serif text-4xl text-deep-brown">{rsvp.successTitle}</p>
-              <p className="mt-4 text-lg leading-8 text-deep-brown/75">
+              <p className="font-serif text-4xl text-black">{rsvp.successTitle}</p>
+              <p className="mt-4 text-lg leading-8 text-black/75">
                 {status === "already-submitted" ? rsvp.alreadySubmitted : rsvp.successBody}
               </p>
             </div>
@@ -127,22 +127,22 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
                 <legend className="sr-only">{rsvp.title}</legend>
                 <div className="space-y-3">
                   {guest.answerOptions.map((option) => (
-                    <label
-                      key={option.id}
-                      className="flex cursor-pointer gap-4 border border-warm-sand/80 bg-white/55 p-4 transition hover:-translate-y-0.5 hover:border-olive-gray hover:shadow-[0_16px_35px_rgba(61,51,42,0.08)]"
-                    >
-                      <input
-                        type="radio"
-                        name="answerOption"
-                        value={option.id}
-                        checked={formState.answerOptionId === option.id}
-                        className="mt-1 h-4 w-4 accent-olive-gray"
-                        onChange={(event) => updateField("answerOptionId", event.target.value)}
-                      />
-                      <span>
-                        <span className="block font-semibold text-deep-brown">{option.label}</span>
+                      <label
+                        key={option.id}
+                        className="flex cursor-pointer items-center gap-4 border border-warm-sand/80 bg-white/55 p-4 transition hover:-translate-y-0.5 hover:border-olive-gray hover:shadow-[0_16px_35px_rgba(61,51,42,0.08)]"
+                      >
+                        <input
+                          type="radio"
+                          name="answerOption"
+                          value={option.id}
+                          checked={formState.answerOptionId === option.id}
+                          className="h-5 w-5 accent-olive-gray"
+                          onChange={(event) => updateField("answerOptionId", event.target.value)}
+                        />
+                        <span>
+                          <span className="block font-serif text-2xl leading-relaxed text-black">{option.label}</span>
                         {option.description ? (
-                          <span className="mt-1 block text-sm text-deep-brown/65">
+                          <span className="mt-1 block text-sm text-black/65">
                             {option.description}
                           </span>
                         ) : null}
@@ -260,11 +260,11 @@ type FieldProps = {
 function Field({ id, label, input, error }: FieldProps) {
   const errorId = `${id}-error`;
   const className =
-    "mt-2 w-full border border-warm-sand bg-white/75 px-4 py-3 text-base text-deep-brown outline-none transition placeholder:text-deep-brown/35 focus:border-olive-gray focus:ring-2 focus:ring-olive-gray/25";
+    "mt-2 w-full border border-warm-sand bg-white/75 px-4 py-3 text-base text-black outline-none transition placeholder:text-black/35 focus:border-olive-gray focus:ring-2 focus:ring-olive-gray/25";
 
   return (
     <div>
-      <label htmlFor={id} className="text-sm font-semibold text-deep-brown">
+      <label htmlFor={id} className="text-sm font-semibold text-black">
         {label}
       </label>
       {cloneElement(input, {

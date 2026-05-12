@@ -14,7 +14,7 @@ export function App() {
   const { guest } = resolveGuest(slug);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-ivory text-deep-brown">
+    <main className="min-h-screen overflow-hidden bg-ivory text-black">
       <ScrollProgress />
       <HeroSection />
       <PersonalSection guest={guest} />

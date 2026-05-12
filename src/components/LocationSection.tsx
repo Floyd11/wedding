@@ -14,26 +14,26 @@ export function LocationSection() {
         <SectionHeading title={location.title} />
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <ParallaxImage
-            src="/images/location.svg"
+            src="/images/anamandara.jpg"
             alt={location.locationImageAlt}
             className="aspect-[16/11] shadow-[0_28px_80px_rgba(61,51,42,0.10)]"
           />
           <div className="pb-2">
-            <Reveal as="p" className="font-serif text-4xl leading-tight text-deep-brown">
+            <Reveal as="p" className="font-serif text-4xl leading-tight text-black">
               {location.city}
             </Reveal>
-            <Reveal as="p" className="mt-6 text-xl leading-9 text-deep-brown/75" delay={0.1}>
+            <Reveal as="p" className="mt-6 font-serif text-2xl leading-relaxed text-black" delay={0.1}>
               {location.description}
             </Reveal>
           </div>
         </div>
 
         <div className="mt-20 grid gap-10 border-t border-warm-sand pt-12 lg:grid-cols-[0.75fr_1.25fr]">
-          <Reveal as="h3" className="font-serif text-4xl text-deep-brown">
+          <Reveal as="h3" className="font-serif text-4xl text-black">
             {location.travelTitle}
           </Reveal>
           <div>
-            <Reveal as="p" className="text-lg leading-8 text-deep-brown/75">
+            <Reveal as="p" className="font-serif text-2xl leading-relaxed text-black">
               {location.travelIntro}
             </Reveal>
             <ul className="mt-8 space-y-4">
@@ -42,7 +42,7 @@ export function LocationSection() {
                   as="li"
                   key={item}
                   delay={index * 0.06}
-                  className="border-l border-soft-rose pl-5 text-lg leading-8 text-deep-brown"
+                  className="border-l border-soft-rose pl-5 font-serif text-2xl leading-relaxed text-black"
                 >
                   {item}
                 </Reveal>

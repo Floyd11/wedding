@@ -16,8 +16,8 @@ export function AdditionalSections({ sections }: AdditionalSectionsProps) {
       <div className="mx-auto max-w-4xl space-y-8 border-y border-warm-sand bg-white/25 px-5 py-10 shadow-[0_18px_60px_rgba(61,51,42,0.06)] sm:px-8">
         {sections.map((section) => (
           <Reveal as="article" key={section.title}>
-            <h2 className="font-serif text-3xl text-deep-brown">{section.title}</h2>
-            <p className="mt-4 text-lg leading-8 text-deep-brown/75">{section.body}</p>
+            <h2 className="font-serif text-3xl text-black">{section.title}</h2>
+            <p className="mt-4 text-lg leading-8 text-black/75">{section.body}</p>
           </Reveal>
         ))}
       </div>

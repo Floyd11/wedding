@@ -49,20 +49,14 @@ export const guests: GuestConfig[] = [
   {
     guestId: "guest-ivanovy",
     slug: "ivanovy-a8f3",
-    greeting: "Уважаемые Ивановы",
+    greeting: "Дорогие Ивановы",
     displayName: "семья Ивановых",
     answerOptions: familyAnswerOptions,
-    additionalSections: [
-      {
-        title: "Для вашей семьи",
-        body: "Мы заранее подберем комфортный трансфер и будем рады помочь с маршрутом из Нячанга в Далат.",
-      },
-    ],
   },
   {
     guestId: "guest-maria",
     slug: "maria-k2d9",
-    greeting: "Уважаемая Мария",
+    greeting: "Прекрасная Мария",
     displayName: "Мария",
     answerOptions: defaultAnswerOptions,
   },

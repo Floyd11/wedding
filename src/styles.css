@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300&family=Great+Vibes&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -7,8 +7,10 @@
   --color-olive-gray: #8A8B76;
   --color-deep-brown: #3D332A;
   --color-soft-rose: #D8B9AA;
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Cormorant Infant", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Infant", serif;
+  --font-display: "Playfair Display", "Cormorant Infant", serif;
+  --font-script: "Great Vibes", cursive;
 }
 
 * {
@@ -19,14 +21,16 @@ html {
   scroll-behavior: smooth;
   background: #F8F3EA;
   overflow-x: hidden;
+  font-size: 120%;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   overflow-x: hidden;
-  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
-  color: #3D332A;
+  font-family: "Cormorant Infant", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 300;
+  color: #000000;
   background:
     linear-gradient(90deg, rgba(216, 199, 174, 0.18) 1px, transparent 1px),
     linear-gradient(180deg, rgba(216, 199, 174, 0.14) 1px, transparent 1px),

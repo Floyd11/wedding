@@ -36,9 +36,9 @@ export function DressCodeSection() {
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           <ParallaxImage
-            src="/images/dress-palette.svg"
+            src="/images/palette.jpg"
             alt={dressCode.paletteAlt}
-            className="aspect-[4/3]"
+            className="aspect-[3/4]"
           />
           <ParallaxImage
             src="/images/dress-examples.svg"

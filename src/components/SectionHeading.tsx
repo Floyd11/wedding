@@ -6,7 +6,7 @@ type SectionHeadingProps = {
 };
 
 export function SectionHeading({ kicker, title, align = "center", tone = "light" }: SectionHeadingProps) {
-  const titleColor = tone === "dark" ? "text-ivory" : "text-deep-brown";
+  const titleColor = tone === "dark" ? "text-ivory" : "text-black";
   const kickerColor = tone === "dark" ? "text-warm-sand" : "text-olive-gray";
 
   return (
