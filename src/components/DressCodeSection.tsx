@@ -15,7 +15,7 @@ export function DressCodeSection() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading title={dressCode.title} tone="light" />
 
-        <div className="mt-8 grid items-center gap-10 lg:grid-cols-2">
+        <div className="mt-8 grid items-center gap-10 lg:grid-cols-2 lg:items-stretch">
           {/* Left Column: Text Content */}
           <div className="space-y-6">
             <div>
@@ -41,11 +41,11 @@ export function DressCodeSection() {
           </div>
 
           {/* Right Column: Palette Image */}
-          <Reveal className="flex justify-center">
+          <Reveal className="flex h-full items-center justify-center">
             <img
-              src="/images/IMG_2873.PNG"
+              src="/images/IMG_2901.PNG"
               alt={dressCode.paletteAlt}
-              className="max-h-[60vh] w-auto"
+              className="h-auto w-full max-w-[450px] lg:max-w-none lg:scale-110 lg:origin-center"
               loading="lazy"
             />
           </Reveal>
