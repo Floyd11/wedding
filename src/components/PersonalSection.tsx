@@ -13,7 +13,7 @@ export function PersonalSection({ guest }: PersonalSectionProps) {
   const { personal } = weddingContent;
 
   return (
-    <AnimatedSection id="personal" className="relative px-5 pb-20 pt-0 sm:pb-28 sm:pt-0">
+    <AnimatedSection id="personal" className="relative px-5 pb-12 pt-0 sm:pb-16 sm:pt-0">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
           <Reveal as="h2" className="font-script leading-[1.1] text-black" style={{ fontSize: "clamp(3.2rem, 11vw, 5.8rem)" }}>
@@ -32,7 +32,7 @@ export function PersonalSection({ guest }: PersonalSectionProps) {
           />
         </figure>
       </div>
-      <div className="mt-20">
+      <div className="mt-12">
         <EditorialDivider />
       </div>
     </AnimatedSection>

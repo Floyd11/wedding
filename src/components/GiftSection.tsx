@@ -9,10 +9,10 @@ export function GiftSection() {
   const { gifts } = weddingContent;
 
   return (
-    <AnimatedSection className="relative px-5 py-20 sm:py-28">
+    <AnimatedSection className="relative px-5 pb-12 pt-10 sm:pb-16 sm:pt-12">
       <div className="mx-auto max-w-3xl text-center">
         <SectionHeading title={gifts.title} />
-        <Reveal as="p" className="mt-8 text-xl leading-9 text-black/75">
+        <Reveal as="p" className="mt-8 font-serif text-2xl leading-relaxed text-black/75">
           {gifts.body}
         </Reveal>
         <div className="mt-12 text-left shadow-[0_22px_70px_rgba(61,51,42,0.07)]">
@@ -39,7 +39,7 @@ export function GiftSection() {
           </Accordion>
         </div>
       </div>
-      <div className="mt-20">
+      <div className="mt-12">
         <EditorialDivider />
       </div>
     </AnimatedSection>

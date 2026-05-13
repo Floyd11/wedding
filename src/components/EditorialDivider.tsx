@@ -22,7 +22,7 @@ export function EditorialDivider({ tone = "light" }: EditorialDividerProps) {
 
   return (
     <div
-      className="w-full flex items-center justify-center py-12 overflow-hidden px-8 md:px-16"
+      className="w-full flex items-center justify-center py-4 overflow-hidden px-8 md:px-16"
       aria-hidden="true"
     >
       <div className="flex items-center w-full max-w-[2000px]">

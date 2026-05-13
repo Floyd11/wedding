@@ -9,7 +9,7 @@ export function LocationSection() {
   const { location } = weddingContent;
 
   return (
-    <AnimatedSection className="relative bg-white/35 px-5 py-20 sm:py-28">
+    <AnimatedSection className="relative bg-white/35 px-5 pb-12 pt-10 sm:pb-16 sm:pt-12">
       <div className="mx-auto max-w-6xl">
         <SectionHeading title={location.title} />
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -51,7 +51,7 @@ export function LocationSection() {
           </div>
         </div>
       </div>
-      <div className="mt-20">
+      <div className="mt-12">
         <EditorialDivider />
       </div>
     </AnimatedSection>

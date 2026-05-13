@@ -104,7 +104,7 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
   const isLoading = status === "loading";
 
   return (
-    <AnimatedSection id="rsvp" className="relative bg-soft-rose/16 px-5 py-12 sm:py-16">
+    <AnimatedSection id="rsvp" className="relative bg-soft-rose/16 px-5 pb-12 pt-10 sm:pb-16 sm:pt-12">
       <div className="absolute left-0 top-0 hidden h-full w-px bg-warm-sand/55 sm:block" aria-hidden="true" />
       <div className="absolute right-0 top-0 hidden h-full w-px bg-warm-sand/55 sm:block" aria-hidden="true" />
       <div className="mx-auto max-w-3xl">
@@ -117,7 +117,7 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
           {isSubmitted ? (
             <div className="text-center" role="status" aria-live="polite">
               <p className="font-serif text-4xl text-black">{rsvp.successTitle}</p>
-              <p className="mt-4 text-lg leading-8 text-black/75">
+              <p className="mt-4 font-serif text-2xl leading-relaxed text-black/75">
                 {status === "already-submitted" ? rsvp.alreadySubmitted : rsvp.successBody}
               </p>
             </div>

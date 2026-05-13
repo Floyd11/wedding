@@ -9,7 +9,7 @@ export function DressCodeSection() {
   const { dressCode } = weddingContent;
 
   return (
-    <AnimatedSection className="relative bg-soft-rose/16 px-5 py-12 text-black sm:py-16">
+    <AnimatedSection className="relative bg-soft-rose/16 px-5 pb-12 pt-10 sm:pb-16 sm:pt-12">
       <div className="absolute left-0 top-0 hidden h-full w-px bg-warm-sand/55 sm:block" aria-hidden="true" />
       <div className="absolute right-0 top-0 hidden h-full w-px bg-warm-sand/55 sm:block" aria-hidden="true" />
       <div className="mx-auto max-w-6xl">
@@ -19,10 +19,10 @@ export function DressCodeSection() {
           {/* Left Column: Text Content */}
           <div className="space-y-6">
             <div>
-              <Reveal as="p" className="text-lg font-semibold text-black">
+              <Reveal as="p" className="font-serif text-2xl font-semibold text-black">
                 {dressCode.weatherTitle}
               </Reveal>
-              <ul className="mt-2 flex flex-wrap gap-x-4 text-lg text-black/80">
+              <ul className="mt-2 flex flex-wrap gap-x-4 font-serif text-2xl text-black/80">
                 {dressCode.weather.map((item, index) => (
                   <Reveal as="li" key={index} delay={index * 0.05} className="whitespace-nowrap">
                     {item}
@@ -31,7 +31,7 @@ export function DressCodeSection() {
               </ul>
             </div>
 
-            <div className="space-y-4 text-base leading-relaxed text-black/75">
+            <div className="space-y-4 font-serif text-2xl leading-relaxed text-black/75">
               {dressCode.body.map((paragraph, index) => (
                 <Reveal as="p" key={index} delay={index * 0.05}>
                   {paragraph}

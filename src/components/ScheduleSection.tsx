@@ -2,12 +2,13 @@ import { weddingContent } from "../content/content";
 import { AnimatedSection } from "./AnimatedSection";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
+import { EditorialDivider } from "./EditorialDivider";
 
 export function ScheduleSection() {
   const { schedule } = weddingContent;
 
   return (
-    <AnimatedSection className="px-5 py-20 sm:py-28">
+    <AnimatedSection className="px-5 pb-12 pt-10 sm:pb-16 sm:pt-12">
       <div className="mx-auto max-w-4xl">
         <SectionHeading title={schedule.title} />
         <ol className="relative mt-14 border-l border-warm-sand pl-7 sm:ml-20 sm:pl-10">
@@ -33,6 +34,9 @@ export function ScheduleSection() {
             </Reveal>
           ))}
         </ol>
+      </div>
+      <div className="mt-12">
+        <EditorialDivider />
       </div>
     </AnimatedSection>
   );
