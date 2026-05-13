@@ -19,10 +19,10 @@ export function DressCodeSection() {
           {/* Left Column: Text Content */}
           <div className="space-y-6">
             <div>
-              <Reveal as="p" className="font-serif text-2xl font-semibold text-black">
+              <Reveal as="p" className="font-serif text-2xl italic text-black">
                 {dressCode.weatherTitle}
               </Reveal>
-              <ul className="mt-2 flex flex-wrap gap-x-4 font-serif text-2xl text-black/80">
+              <ul className="mt-2 flex flex-wrap gap-x-4 font-serif text-2xl italic text-black/80">
                 {dressCode.weather.map((item, index) => (
                   <Reveal as="li" key={index} delay={index * 0.05} className="whitespace-nowrap">
                     {item}
@@ -43,7 +43,7 @@ export function DressCodeSection() {
           {/* Right Column: Palette Image */}
           <Reveal className="flex h-full items-center justify-center">
             <img
-              src="/images/IMG_2901.PNG"
+              src="/images/IMG_2873.PNG"
               alt={dressCode.paletteAlt}
               className="h-auto w-full max-w-[450px] lg:max-w-none lg:scale-110 lg:origin-center"
               loading="lazy"
