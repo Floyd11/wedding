@@ -12,13 +12,13 @@ export function LocationSection() {
     <AnimatedSection className="relative bg-white/35 px-5 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl">
         <SectionHeading title={location.title} />
-        <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+        <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <ParallaxImage
-            src="/images/anamandara.jpg"
+            src="/images/IMG521.png"
             alt={location.locationImageAlt}
             className="aspect-[16/11] shadow-[0_28px_80px_rgba(61,51,42,0.10)]"
           />
-          <div className="pb-2">
+          <div>
             <Reveal as="p" className="font-serif text-4xl leading-tight text-black">
               {location.city}
             </Reveal>

@@ -23,11 +23,11 @@ export function ScheduleSection() {
                 aria-hidden="true"
               />
               <div className="grid gap-2 border-b border-warm-sand/55 pb-6 sm:grid-cols-[10rem_1fr] items-center">
-                <time className="font-serif text-2xl text-black">{item.time}</time>
+                <time className="font-serif text-2xl text-black text-volume-serif">{item.time}</time>
                 {item.text ? (
-                  <span className="font-serif text-2xl leading-relaxed text-black">{item.text}</span>
+                   <span className="font-serif text-2xl leading-relaxed text-black text-volume-serif">{item.text}</span>
                 ) : (
-                  <span className="font-serif text-2xl leading-relaxed text-olive-gray">день свадьбы</span>
+                   <span className="font-serif text-2xl leading-relaxed text-olive-gray text-volume-serif">день свадьбы</span>
                 )}
               </div>
             </Reveal>

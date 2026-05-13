@@ -7,6 +7,7 @@ type ParallaxImageProps = {
   className?: string;
   imageClassName?: string;
   loading?: "eager" | "lazy";
+  showRing?: boolean;
 };
 
 export function ParallaxImage({
@@ -15,6 +16,7 @@ export function ParallaxImage({
   className = "",
   imageClassName = "",
   loading = "lazy",
+  showRing = true,
 }: ParallaxImageProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -32,7 +34,9 @@ export function ParallaxImage({
         className={`h-[112%] w-full object-cover ${imageClassName}`}
         style={{ y }}
       />
-      <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-deep-brown/8" />
+      {showRing && (
+        <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-deep-brown/8" />
+      )}
     </div>
   );
 }

@@ -57,3 +57,28 @@ img {
   color: #F8F3EA;
   background: #3D332A;
 }
+
+/* Universal Premium Text Volume - Pronounced Depth */
+h1, h2, h3, p, li, span, .font-serif, .font-display, .font-script {
+  text-shadow: 
+    1px 1px 1px rgba(0, 0, 0, 0.1),
+    1px 2px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Extra depth for large headings and script fonts */
+h1, h2, .font-script, .font-display {
+  text-shadow: 
+    1px 1.5px 0px rgba(61, 51, 42, 0.12),
+    1.5px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Special treatment for text on dark backgrounds */
+.bg-deep-brown h1,
+.bg-deep-brown h2,
+.bg-deep-brown h3,
+.bg-deep-brown p,
+.bg-deep-brown li {
+  text-shadow: 
+    1px 1px 2px rgba(0, 0, 0, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.3);
+}

@@ -155,7 +155,7 @@ export function HeroSection() {
       >
         <button
           type="button"
-          className="group inline-flex items-center gap-1.5 rounded-full border border-white/50 bg-white/15 px-3.5 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm transition hover:bg-white/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          className="group inline-flex items-center gap-1 rounded-full border border-white/40 bg-white/10 px-2 py-0.5 text-[0.5rem] font-medium uppercase tracking-[0.15em] text-white backdrop-blur-sm transition hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
           onClick={scrollToInvitation}
         >
           Листать дальше

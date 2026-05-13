@@ -104,14 +104,14 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
   const isLoading = status === "loading";
 
   return (
-    <AnimatedSection id="rsvp" className="relative bg-soft-rose/16 px-5 py-20 sm:py-28">
+    <AnimatedSection id="rsvp" className="relative bg-soft-rose/16 px-5 py-12 sm:py-16">
       <div className="absolute left-0 top-0 hidden h-full w-px bg-warm-sand/55 sm:block" aria-hidden="true" />
       <div className="absolute right-0 top-0 hidden h-full w-px bg-warm-sand/55 sm:block" aria-hidden="true" />
       <div className="mx-auto max-w-3xl">
         <SectionHeading title={rsvp.title} />
-        <p className="mt-6 text-center font-serif text-2xl leading-relaxed text-black">{rsvp.deadline}</p>
+        <p className="mt-4 text-center font-serif text-2xl leading-relaxed text-black">{rsvp.deadline}</p>
 
-        <div className="relative mt-12 border border-warm-sand/70 bg-ivory/85 p-5 shadow-[0_30px_90px_rgba(61,51,42,0.12)] backdrop-blur sm:p-8">
+        <div className="relative mt-8 border border-warm-sand/70 bg-ivory/85 p-4 shadow-[0_20px_70px_rgba(61,51,42,0.12)] backdrop-blur sm:p-6">
           <div className="absolute -left-3 -top-3 h-14 w-14 border-l border-t border-soft-rose" aria-hidden="true" />
           <div className="absolute -bottom-3 -right-3 h-14 w-14 border-b border-r border-soft-rose" aria-hidden="true" />
           {isSubmitted ? (
@@ -122,14 +122,14 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
               </p>
             </div>
           ) : (
-            <form className="space-y-7" onSubmit={handleSubmit} noValidate>
+            <form className="space-y-4" onSubmit={handleSubmit} noValidate>
               <fieldset>
                 <legend className="sr-only">{rsvp.title}</legend>
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {guest.answerOptions.map((option) => (
                       <label
                         key={option.id}
-                        className="flex cursor-pointer items-center gap-4 border border-warm-sand/80 bg-white/55 p-4 transition hover:-translate-y-0.5 hover:border-olive-gray hover:shadow-[0_16px_35px_rgba(61,51,42,0.08)]"
+                        className="flex cursor-pointer items-center gap-4 border border-warm-sand/80 bg-white/55 p-3 transition hover:-translate-y-0.5 hover:border-olive-gray hover:shadow-[0_12px_25px_rgba(61,51,42,0.08)]"
                       >
                         <input
                           type="radio"
@@ -220,14 +220,14 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
                     id="rsvp-message"
                     value={formState.message}
                     placeholder={rsvp.messagePlaceholder}
-                    rows={4}
+                    rows={2}
                     onChange={(event) => updateField("message", event.target.value)}
                   />
                 }
               />
 
               {status === "error" ? (
-                <p className="border border-red-200 bg-red-50 p-4 text-sm text-red-800" role="alert">
+                <p className="border border-red-200 bg-red-50 p-3 text-sm text-red-800" role="alert">
                   {errorMessage}
                 </p>
               ) : null}
@@ -235,7 +235,7 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-deep-brown px-6 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-ivory transition hover:bg-olive-gray focus:outline-none focus-visible:ring-2 focus-visible:ring-deep-brown focus-visible:ring-offset-4 focus-visible:ring-offset-ivory disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full bg-deep-brown px-6 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-ivory transition hover:bg-olive-gray focus:outline-none focus-visible:ring-2 focus-visible:ring-deep-brown focus-visible:ring-offset-4 focus-visible:ring-offset-ivory disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {isLoading ? rsvp.submitting : rsvp.submit}
               </button>
@@ -243,7 +243,7 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
           )}
         </div>
       </div>
-      <div className="mt-20">
+      <div className="mt-12">
         <EditorialDivider />
       </div>
     </AnimatedSection>

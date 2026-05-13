@@ -5,14 +5,16 @@ type RevealProps = PropsWithChildren<{
   as?: "article" | "div" | "li" | "p" | "h1" | "h2" | "h3";
   className?: string;
   delay?: number;
+  style?: React.CSSProperties;
 }>;
 
-export function Reveal({ as = "div", children, className = "", delay = 0 }: RevealProps) {
+export function Reveal({ as = "div", children, className = "", delay = 0, style }: RevealProps) {
   const Component = motion[as];
 
   return (
     <Component
       className={className}
+      style={style}
       initial={{ opacity: 0.62, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10% 0px" }}

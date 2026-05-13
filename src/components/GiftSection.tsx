@@ -17,16 +17,24 @@ export function GiftSection() {
         </Reveal>
         <div className="mt-12 text-left shadow-[0_22px_70px_rgba(61,51,42,0.07)]">
           <Accordion title={gifts.accordionTitle}>
-            <div className="flex justify-center">
-              <img
-                src="/images/qr-gift.png"
-                alt={gifts.qrAlt}
-                className="h-52 w-52 border border-warm-sand bg-white p-4 shadow-[0_18px_45px_rgba(61,51,42,0.10)]"
-                loading="lazy"
-                onError={(event) => {
-                  event.currentTarget.src = "/images/qr-gift.svg";
-                }}
-              />
+            <div className="flex flex-col items-center justify-center gap-12 py-4 sm:flex-row sm:items-start sm:gap-16">
+              {gifts.qrCodes.map((qr, index) => (
+                <div key={index} className="flex flex-col items-center">
+                  <div className="relative">
+                    <img
+                      src={qr.src}
+                      alt={qr.alt}
+                      className="h-52 w-52 border border-warm-sand bg-white p-3 shadow-[0_18px_45px_rgba(61,51,42,0.10)] transition-transform hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  {qr.label && (
+                    <p className="mt-4 font-serif text-sm tracking-wider text-black/60 uppercase">
+                      {qr.label}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </Accordion>
         </div>
