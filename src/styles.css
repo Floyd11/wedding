@@ -18,6 +18,7 @@
 }
 
 html {
+  color-scheme: light;
   scroll-behavior: smooth;
   background: #F8F3EA;
   overflow-x: hidden;

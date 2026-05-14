@@ -103,10 +103,10 @@ export function HeroSection() {
         {/* Text content — inside the frame's central body area */}
         <div
           className="absolute z-20 flex flex-col items-center justify-evenly text-center"
-          style={{ inset: "16% 14%" }}
+          style={{ inset: "16% 12%" }}
         >
           {/* ПРИГЛАШАЕМ НА СВАДЬБУ */}
-          <p className="text-[0.75rem] font-semibold uppercase tracking-[0.30em] text-black/80 sm:text-[1rem]">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.30em] text-black/80 sm:text-[1rem]">
             {hero.invitation.split(" на ")[0]}
             <br />
             на&nbsp;{hero.invitation.split(" на ")[1]}
@@ -116,34 +116,34 @@ export function HeroSection() {
           <div className="relative flex w-full flex-col items-center">
             <span
               className="pointer-events-none absolute inset-0 flex items-center justify-center select-none font-script leading-none text-soft-rose/40"
-              style={{ fontSize: "clamp(4.2rem, 18vw, 9rem)" }}
+              style={{ fontSize: "clamp(3.8rem, 16vw, 9rem)" }}
               aria-hidden="true"
             >
               и
             </span>
             <p
               className="relative font-script leading-[1.05] text-black"
-              style={{ fontSize: "clamp(2.8rem, 11vw, 5.8rem)" }}
+              style={{ fontSize: "clamp(2.4rem, 10vw, 5.8rem)" }}
             >
               {firstName}
             </p>
             <p
               className="relative font-script leading-[1.05] text-black"
-              style={{ fontSize: "clamp(2.8rem, 11vw, 5.8rem)" }}
+              style={{ fontSize: "clamp(2.4rem, 10vw, 5.8rem)" }}
             >
               {secondName}
             </p>
           </div>
 
           {/* которая состоится */}
-          <p className="text-[0.75rem] font-semibold uppercase tracking-[0.26em] text-black/80 sm:text-[1rem]">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.26em] text-black/80 sm:text-[1rem]">
             {hero.dateIntro}
           </p>
 
           {/* Date */}
           <p
             className="font-serif font-light leading-none text-black"
-            style={{ fontSize: "clamp(1.3rem, 5.5vw, 2.4rem)" }}
+            style={{ fontSize: "clamp(1.1rem, 5vw, 2.4rem)" }}
           >
             24.08.2026
           </p>
