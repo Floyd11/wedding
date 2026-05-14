@@ -1,5 +1,5 @@
 import { fallbackGuest, guests } from "../content/guests";
-import type { ResolvedGuest } from "../types";
+import type { GuestConfig } from "../types";
 
 const INVITE_PATH_PREFIX = "/i/";
 
@@ -9,10 +9,10 @@ export function normalizeSlug(slug: string | null): string | null {
   }
 
   const normalized = decodeURIComponent(slug).trim().toLowerCase();
-  return /^[a-z0-9-]+$/.test(normalized) ? normalized : null;
+  return /^[a-z0-9-_.&+]+$/.test(normalized) ? normalized : null;
 }
 
-export function getSlugFromLocation(location: Pick<Location, "pathname" | "search">): string | null {
+export function getSlugFromUrl(location: Pick<Location, "pathname" | "search">): string | null {
   const querySlug = new URLSearchParams(location.search).get("g");
 
   if (querySlug) {
@@ -27,21 +27,13 @@ export function getSlugFromLocation(location: Pick<Location, "pathname" | "searc
   return null;
 }
 
-export function resolveGuest(slug: string | null): ResolvedGuest {
+export function getGuestBySlug(slug: string | null): GuestConfig {
   const normalizedSlug = normalizeSlug(slug);
   const guest = guests.find((guestConfig) => guestConfig.slug === normalizedSlug);
 
-  if (!guest) {
-    return {
-      guest: fallbackGuest,
-      isFallback: true,
-      slug: normalizedSlug,
-    };
-  }
+  return guest ?? fallbackGuest;
+}
 
-  return {
-    guest,
-    isFallback: false,
-    slug: normalizedSlug,
-  };
+export function isFallbackGuest(guest: GuestConfig): boolean {
+  return guest.guestId === "fallback";
 }

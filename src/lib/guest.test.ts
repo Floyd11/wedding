@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { fallbackGuest } from "../content/guests";
-import { getSlugFromLocation, normalizeSlug, resolveGuest } from "./guest";
+import { getGuestBySlug, getSlugFromUrl, isFallbackGuest, normalizeSlug } from "./guest";
 
 describe("guest routing", () => {
   it("normalizes valid slugs", () => {
@@ -12,7 +12,7 @@ describe("guest routing", () => {
   });
 
   it("reads slug from query string first", () => {
-    const slug = getSlugFromLocation({
+    const slug = getSlugFromUrl({
       pathname: "/i/maria-k2d9",
       search: "?g=ivanovy-a8f3",
     } as Location);
@@ -21,7 +21,7 @@ describe("guest routing", () => {
   });
 
   it("reads slug from invite path", () => {
-    const slug = getSlugFromLocation({
+    const slug = getSlugFromUrl({
       pathname: "/i/maria-k2d9",
       search: "",
     } as Location);
@@ -32,17 +32,17 @@ describe("guest routing", () => {
 
 describe("guest fallback", () => {
   it("resolves known guests", () => {
-    const resolvedGuest = resolveGuest("ivanovy-a8f3");
+    const guest = getGuestBySlug("ivanovy-a8f3");
 
-    expect(resolvedGuest.isFallback).toBe(false);
-    expect(resolvedGuest.guest.displayName).toBe("семья Ивановых");
-    expect(resolvedGuest.guest.guestId).toBe("guest-ivanovy");
+    expect(isFallbackGuest(guest)).toBe(false);
+    expect(guest.displayName).toBe("семья Ивановых");
+    expect(guest.guestId).toBe("guest-ivanovy");
   });
 
   it("uses generic guest for unknown slugs", () => {
-    const resolvedGuest = resolveGuest("unknown-a1b2");
+    const guest = getGuestBySlug("unknown-a1b2");
 
-    expect(resolvedGuest.isFallback).toBe(true);
-    expect(resolvedGuest.guest).toEqual(fallbackGuest);
+    expect(isFallbackGuest(guest)).toBe(true);
+    expect(guest).toEqual(fallbackGuest);
   });
 });

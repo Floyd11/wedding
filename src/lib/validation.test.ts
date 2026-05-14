@@ -4,7 +4,13 @@ import type { GuestConfig, RsvpFormState } from "../types";
 import { hasValidationErrors, validateRsvpForm } from "./validation";
 
 const familyGuest = guests.find((guest) => guest.slug === "ivanovy-a8f3") as GuestConfig;
-const singleGuest = guests.find((guest) => guest.slug === "maria-k2d9") as GuestConfig;
+const singleGuest = guests.find((guest) => guest.slug === "thecrew") as GuestConfig;
+const plusOneGuest: GuestConfig = {
+  ...singleGuest,
+  answerOptions: [
+    { id: "plus-one-yes-plus", label: "Да, и возьму с собой +1.", requiresEmail: true, requiresPlusOneName: true }
+  ]
+};
 
 const baseFormState: RsvpFormState = {
   answerOptionId: "",
@@ -25,7 +31,7 @@ describe("validateRsvpForm", () => {
   it("validates email when selected option requires it", () => {
     const errors = validateRsvpForm(singleGuest, {
       ...baseFormState,
-      answerOptionId: "attending",
+      answerOptionId: "single-yes",
       email: "not-an-email",
     });
 
@@ -33,9 +39,9 @@ describe("validateRsvpForm", () => {
   });
 
   it("validates plus-one name when required", () => {
-    const errors = validateRsvpForm(singleGuest, {
+    const errors = validateRsvpForm(plusOneGuest, {
       ...baseFormState,
-      answerOptionId: "attending-with-plus-one",
+      answerOptionId: "plus-one-yes-plus",
       email: "guest@example.com",
     });
 
@@ -45,7 +51,7 @@ describe("validateRsvpForm", () => {
   it("validates guest count when required", () => {
     const errors = validateRsvpForm(familyGuest, {
       ...baseFormState,
-      answerOptionId: "family-attending",
+      answerOptionId: "family-partial",
       email: "family@example.com",
       guestCount: "13",
     });
@@ -56,7 +62,7 @@ describe("validateRsvpForm", () => {
   it("accepts a valid RSVP state", () => {
     const errors = validateRsvpForm(familyGuest, {
       ...baseFormState,
-      answerOptionId: "family-attending",
+      answerOptionId: "family-partial",
       email: "family@example.com",
       guestCount: "4",
     });

@@ -74,6 +74,7 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
       guestId: guest.guestId,
       slug: slug ?? guest.slug,
       displayName: guest.displayName,
+      inviteType: guest.inviteType,
       answerId: option.id,
       answerLabel: option.label,
       sourceUrl: window.location.href,
@@ -104,7 +105,7 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
   const isLoading = status === "loading";
 
   return (
-    <AnimatedSection id="rsvp" className="relative bg-soft-rose/16 px-5 py-8 lg:pt-12 lg:pb-16">
+    <AnimatedSection id="rsvp" className="relative bg-soft-rose/16 px-5 py-8 sm:pt-12 sm:pb-16">
       <div className="absolute left-0 top-0 hidden h-full w-px bg-warm-sand/55 sm:block" aria-hidden="true" />
       <div className="absolute right-0 top-0 hidden h-full w-px bg-warm-sand/55 sm:block" aria-hidden="true" />
       <div className="mx-auto max-w-3xl">
@@ -141,13 +142,8 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
                         />
                         <span>
                           <span className="block font-serif text-2xl leading-relaxed text-black">{option.label}</span>
-                        {option.description ? (
-                          <span className="mt-1 block text-sm text-black/65">
-                            {option.description}
-                          </span>
-                        ) : null}
-                      </span>
-                    </label>
+                        </span>
+                      </label>
                   ))}
                 </div>
                 {errors.answerOptionId ? (

@@ -1,24 +1,27 @@
+export type InviteType = "single" | "couple" | "family" | "group";
+
 export type AnswerOption = {
   id: string;
   label: string;
-  description?: string;
-  requiresEmail?: boolean;
+  requiresEmail: boolean;
   requiresPlusOneName?: boolean;
   requiresGuestCount?: boolean;
 };
 
-export type AdditionalSection = {
+export type ExtraSection = {
+  id: string;
   title: string;
   body: string;
 };
 
 export type GuestConfig = {
-  guestId: string;
   slug: string;
-  greeting: string;
+  guestId: string;
   displayName: string;
+  greeting: string;
+  inviteType: InviteType;
   answerOptions: AnswerOption[];
-  additionalSections?: AdditionalSection[];
+  extraSections?: ExtraSection[];
 };
 
 export type ResolvedGuest = {
@@ -39,6 +42,7 @@ export type RsvpPayload = {
   guestId: string;
   slug: string;
   displayName: string;
+  inviteType: InviteType;
   answerId: string;
   answerLabel: string;
   email?: string;

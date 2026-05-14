@@ -40,6 +40,18 @@ npm run lint
 
 Guests are configured in `src/content/guests.ts`.
 
+To add a new guest, append a new object to the `guests` array:
+```typescript
+{
+  slug: "new-guest",
+  guestId: "guest-new-guest",
+  displayName: "Имя Гостя",
+  greeting: "Уважаемый Имя Гостя",
+  inviteType: "single", // "single", "couple", "family", or "group"
+  answerOptions: singleAnswerOptions,
+}
+```
+
 Supported invitation URLs:
 
 ```text
@@ -47,11 +59,16 @@ Supported invitation URLs:
 /i/ivanovy-a8f3
 ```
 
+You can form personal links like:
+`https://domain.com/i/ivanovy-a8f3`
+`https://domain.com/?g=ivanovy-a8f3`
+
 If the slug is unknown or invalid, the site falls back to the generic version:
 
 ```text
 Дорогие гости
 ```
+To test the fallback, navigate to an unknown slug, e.g. `http://localhost:4174/i/unknown`.
 
 ## RSVP
 
@@ -64,6 +81,7 @@ type RsvpPayload = {
   guestId: string;
   slug: string;
   displayName: string;
+  inviteType: InviteType;
   answerId: string;
   answerLabel: string;
   email?: string;

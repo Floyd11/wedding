@@ -9,7 +9,7 @@ export function GiftSection() {
   const { gifts } = weddingContent;
 
   return (
-    <AnimatedSection className="relative px-5 py-8 lg:pt-12 lg:pb-16">
+    <AnimatedSection className="relative px-5 py-8 sm:pt-12 sm:pb-16">
       <div className="mx-auto max-w-3xl text-center">
         <SectionHeading title={gifts.title} />
         <Reveal as="p" className="mt-8 font-serif text-2xl leading-relaxed text-black/75">

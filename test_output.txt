@@ -1,0 +1,157 @@
+
+> wedding-invitation@0.1.0 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.5 [39m[90m/root/wedding[39m
+
+ [31m❯[39m src/lib/guest.test.ts [2m([22m[2m6 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[32m 9[2mms[22m[39m
+     [32m✓[39m normalizes valid slugs[32m 2[2mms[22m[39m
+     [32m✓[39m rejects invalid slugs[32m 0[2mms[22m[39m
+[31m     [31m×[31m reads slug from query string first[39m[32m 3[2mms[22m[39m
+[31m     [31m×[31m reads slug from invite path[39m[32m 1[2mms[22m[39m
+[31m     [31m×[31m resolves known guests[39m[32m 1[2mms[22m[39m
+[31m     [31m×[31m uses generic guest for unknown slugs[39m[32m 0[2mms[22m[39m
+ [31m❯[39m src/lib/validation.test.ts [2m([22m[2m5 tests[22m[2m | [22m[31m5 failed[39m[2m)[22m[32m 10[2mms[22m[39m
+[31m     [31m×[31m requires an answer option[39m[32m 4[2mms[22m[39m
+[31m     [31m×[31m validates email when selected option requires it[39m[32m 1[2mms[22m[39m
+[31m     [31m×[31m validates plus-one name when required[39m[32m 0[2mms[22m[39m
+[31m     [31m×[31m validates guest count when required[39m[32m 2[2mms[22m[39m
+[31m     [31m×[31m accepts a valid RSVP state[39m[32m 2[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 9 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/lib/guest.test.ts[2m > [22mguest routing[2m > [22mreads slug from query string first
+[31m[1mTypeError[22m: getSlugFromLocation is not a function[39m
+[36m [2m❯[22m src/lib/guest.test.ts:[2m15:18[22m[39m
+    [90m 13|[39m
+    [90m 14|[39m   [34mit[39m([32m"reads slug from query string first"[39m[33m,[39m () [33m=>[39m {
+    [90m 15|[39m     [35mconst[39m slug [33m=[39m [34mgetSlugFromLocation[39m({
+    [90m   |[39m                  [31m^[39m
+    [90m 16|[39m       pathname[33m:[39m [32m"/i/maria-k2d9"[39m[33m,[39m
+    [90m 17|[39m       search[33m:[39m [32m"?g=ivanovy-a8f3"[39m[33m,[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/9]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/lib/guest.test.ts[2m > [22mguest routing[2m > [22mreads slug from invite path
+[31m[1mTypeError[22m: getSlugFromLocation is not a function[39m
+[36m [2m❯[22m src/lib/guest.test.ts:[2m24:18[22m[39m
+    [90m 22|[39m
+    [90m 23|[39m   [34mit[39m([32m"reads slug from invite path"[39m[33m,[39m () [33m=>[39m {
+    [90m 24|[39m     [35mconst[39m slug [33m=[39m [34mgetSlugFromLocation[39m({
+    [90m   |[39m                  [31m^[39m
+    [90m 25|[39m       pathname[33m:[39m [32m"/i/maria-k2d9"[39m[33m,[39m
+    [90m 26|[39m       search[33m:[39m [32m""[39m[33m,[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/9]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/lib/guest.test.ts[2m > [22mguest fallback[2m > [22mresolves known guests
+[31m[1mTypeError[22m: resolveGuest is not a function[39m
+[36m [2m❯[22m src/lib/guest.test.ts:[2m35:27[22m[39m
+    [90m 33|[39m [34mdescribe[39m([32m"guest fallback"[39m[33m,[39m () [33m=>[39m {
+    [90m 34|[39m   [34mit[39m([32m"resolves known guests"[39m[33m,[39m () [33m=>[39m {
+    [90m 35|[39m     [35mconst[39m resolvedGuest [33m=[39m [34mresolveGuest[39m([32m"ivanovy-a8f3"[39m)[33m;[39m
+    [90m   |[39m                           [31m^[39m
+    [90m 36|[39m
+    [90m 37|[39m     [34mexpect[39m(resolvedGuest[33m.[39misFallback)[33m.[39m[34mtoBe[39m([35mfalse[39m)[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/9]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/lib/guest.test.ts[2m > [22mguest fallback[2m > [22muses generic guest for unknown slugs
+[31m[1mTypeError[22m: resolveGuest is not a function[39m
+[36m [2m❯[22m src/lib/guest.test.ts:[2m43:27[22m[39m
+    [90m 41|[39m
+    [90m 42|[39m   [34mit[39m([32m"uses generic guest for unknown slugs"[39m[33m,[39m () [33m=>[39m {
+    [90m 43|[39m     [35mconst[39m resolvedGuest [33m=[39m [34mresolveGuest[39m([32m"unknown-a1b2"[39m)[33m;[39m
+    [90m   |[39m                           [31m^[39m
+    [90m 44|[39m
+    [90m 45|[39m     [34mexpect[39m(resolvedGuest[33m.[39misFallback)[33m.[39m[34mtoBe[39m([35mtrue[39m)[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/9]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/lib/validation.test.ts[2m > [22mvalidateRsvpForm[2m > [22mrequires an answer option
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'answerOptions')[39m
+[36m [2m❯[22m findAnswerOption src/lib/validation.ts:[2m10:16[22m[39m
+    [90m  8|[39m   answerOptionId[33m:[39m string[33m,[39m
+    [90m  9|[39m )[33m:[39m [33mAnswerOption[39m [33m|[39m undefined {
+    [90m 10|[39m   return guest.answerOptions.find((option) => option.id === answerOpti…
+    [90m   |[39m                [31m^[39m
+    [90m 11|[39m }
+    [90m 12|[39m
+[90m [2m❯[22m validateRsvpForm src/lib/validation.ts:[2m18:26[22m[39m
+[90m [2m❯[22m src/lib/validation.test.ts:[2m19:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/9]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/lib/validation.test.ts[2m > [22mvalidateRsvpForm[2m > [22mvalidates email when selected option requires it
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'answerOptions')[39m
+[36m [2m❯[22m findAnswerOption src/lib/validation.ts:[2m10:16[22m[39m
+    [90m  8|[39m   answerOptionId[33m:[39m string[33m,[39m
+    [90m  9|[39m )[33m:[39m [33mAnswerOption[39m [33m|[39m undefined {
+    [90m 10|[39m   return guest.answerOptions.find((option) => option.id === answerOpti…
+    [90m   |[39m                [31m^[39m
+    [90m 11|[39m }
+    [90m 12|[39m
+[90m [2m❯[22m validateRsvpForm src/lib/validation.ts:[2m18:26[22m[39m
+[90m [2m❯[22m src/lib/validation.test.ts:[2m26:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/9]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/lib/validation.test.ts[2m > [22mvalidateRsvpForm[2m > [22mvalidates plus-one name when required
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'answerOptions')[39m
+[36m [2m❯[22m findAnswerOption src/lib/validation.ts:[2m10:16[22m[39m
+    [90m  8|[39m   answerOptionId[33m:[39m string[33m,[39m
+    [90m  9|[39m )[33m:[39m [33mAnswerOption[39m [33m|[39m undefined {
+    [90m 10|[39m   return guest.answerOptions.find((option) => option.id === answerOpti…
+    [90m   |[39m                [31m^[39m
+    [90m 11|[39m }
+    [90m 12|[39m
+[90m [2m❯[22m validateRsvpForm src/lib/validation.ts:[2m18:26[22m[39m
+[90m [2m❯[22m src/lib/validation.test.ts:[2m36:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/9]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/lib/validation.test.ts[2m > [22mvalidateRsvpForm[2m > [22mvalidates guest count when required
+[31m[1mAssertionError[22m: expected undefined to be 'Укажите целое число от 1 до 12.' // Object.is equality[39m
+
+[32m- Expected:[39m
+"Укажите целое число от 1 до 12."
+
+[31m+ Received:[39m
+undefined
+
+[36m [2m❯[22m src/lib/validation.test.ts:[2m53:31[22m[39m
+    [90m 51|[39m     })[33m;[39m
+    [90m 52|[39m
+    [90m 53|[39m     [34mexpect[39m(errors[33m.[39mguestCount)[33m.[39m[34mtoBe[39m([32m"Укажите целое число от 1 до 12."[39m)[33m;[39m
+    [90m   |[39m                               [31m^[39m
+    [90m 54|[39m   })[33m;[39m
+    [90m 55|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/9]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/lib/validation.test.ts[2m > [22mvalidateRsvpForm[2m > [22maccepts a valid RSVP state
+[31m[1mAssertionError[22m: expected true to be false // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- false[39m
+[31m+ true[39m
+
+[36m [2m❯[22m src/lib/validation.test.ts:[2m64:41[22m[39m
+    [90m 62|[39m     })[33m;[39m
+    [90m 63|[39m
+    [90m 64|[39m     [34mexpect[39m([34mhasValidationErrors[39m(errors))[33m.[39m[34mtoBe[39m([35mfalse[39m)[33m;[39m
+    [90m   |[39m                                         [31m^[39m
+    [90m 65|[39m   })[33m;[39m
+    [90m 66|[39m })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/9]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m2 failed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[31m9 failed[39m[22m[2m | [22m[1m[32m2 passed[39m[22m[90m (11)[39m
+[2m   Start at [22m 06:57:37
+[2m   Duration [22m 2.10s[2m (transform 96ms, setup 118ms, import 92ms, tests 19ms, environment 1.49s)[22m
+
