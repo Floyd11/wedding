@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { cloneElement, useMemo, useState } from "react";
 import type { FormEvent, InputHTMLAttributes, ReactElement, TextareaHTMLAttributes } from "react";
 import { weddingContent } from "../content/content";
@@ -121,6 +122,19 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
               <p className="mt-4 font-serif text-2xl leading-relaxed text-black/75">
                 {status === "already-submitted" ? rsvp.alreadySubmitted : rsvp.successBody}
               </p>
+              {selectedOption?.id.endsWith("-no") && (
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.8, y: 10 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  className="mt-6 flex justify-center"
+                >
+                  <img 
+                    src="/images/kry.webp" 
+                    alt="Плачущий котик" 
+                    className="h-32 w-32 object-contain drop-shadow-md"
+                  />
+                </motion.div>
+              )}
             </div>
           ) : (
             <form className="space-y-4" onSubmit={handleSubmit} noValidate>
