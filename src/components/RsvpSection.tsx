@@ -104,7 +104,7 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
   const isLoading = status === "loading";
 
   return (
-    <AnimatedSection id="rsvp" className="relative bg-soft-rose/16 px-5 pb-12 pt-10 sm:pb-16 sm:pt-12">
+    <AnimatedSection id="rsvp" className="relative bg-soft-rose/16 px-5 py-8 lg:pt-12 lg:pb-16">
       <div className="absolute left-0 top-0 hidden h-full w-px bg-warm-sand/55 sm:block" aria-hidden="true" />
       <div className="absolute right-0 top-0 hidden h-full w-px bg-warm-sand/55 sm:block" aria-hidden="true" />
       <div className="mx-auto max-w-3xl">

@@ -8,7 +8,7 @@ export function ScheduleSection() {
   const { schedule } = weddingContent;
 
   return (
-    <AnimatedSection className="px-5 pb-12 pt-10 sm:pb-16 sm:pt-12">
+    <AnimatedSection className="px-5 py-8 lg:pt-12 lg:pb-16">
       <div className="mx-auto max-w-4xl">
         <SectionHeading title={schedule.title} />
         <ol className="relative mt-14 border-l border-warm-sand pl-7 sm:ml-20 sm:pl-10">
