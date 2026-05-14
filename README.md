@@ -176,7 +176,37 @@ server {
 }
 ```
 
-The `try_files` fallback is required for `/i/:slug` links.
+    The `try_files` fallback is required for `/i/:slug` links.
+
+## Deploy to Vercel
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Test the build locally:
+   ```bash
+   npm run build
+   ```
+3. Install Vercel CLI (if not installed):
+   ```bash
+   npm i -g vercel
+   ```
+4. Log in to Vercel:
+   ```bash
+   vercel login
+   ```
+5. Link project and deploy to preview:
+   ```bash
+   vercel
+   ```
+6. Deploy to production:
+   ```bash
+   vercel --prod
+   ```
+
+**Important:** You must add the `VITE_RSVP_ENDPOINT` environment variable in the Vercel Dashboard.
+Go to your Project -> Settings -> Environment Variables, add `VITE_RSVP_ENDPOINT` with your Google Apps Script URL, and then trigger a new deployment.
 
 ## Tests
 
