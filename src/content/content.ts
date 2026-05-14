@@ -43,9 +43,9 @@ export const weddingContent = {
     submit: "Отправить ответ",
     submitting: "Отправляем...",
     successTitle: "Спасибо за ответ",
-    successBody: "Мы получили Ваш RSVP и очень рады быть на связи.",
+    successBody: "Мы получили Ваш ответ и очень рады быть на связи.",
     alreadySubmitted:
-      "Ответ уже сохранен на этом устройстве. Если нужно изменить RSVP, пожалуйста, напишите нам напрямую.",
+      "Ответ уже сохранен на этом устройстве. Если нужно его изменить, пожалуйста, напишите нам напрямую.",
     endpointMissing:
       "RSVP endpoint не настроен. Добавьте VITE_RSVP_ENDPOINT в .env.",
     genericError:
