@@ -25,7 +25,7 @@ export function PersonalSection({ guest }: PersonalSectionProps) {
         </div>
         <figure className="relative">
           <ParallaxImage
-            src="/images/IMG_2869.PNG"
+            src="/images/IMG_2869.webp"
             alt={personal.imageAlt}
             showRing={false}
             className="w-full h-auto"

@@ -31,6 +31,7 @@ export function ParallaxImage({
         src={src}
         alt={alt}
         loading={loading}
+        decoding="async"
         className={`h-[112%] w-full object-cover ${imageClassName}`}
         style={{ y }}
       />

@@ -56,8 +56,8 @@ export const weddingContent = {
     body: "Просто приезжайте. Ваше присутствие уже самый лучший подарок для нас.",
     accordionTitle: "Если вы не поедете, но всё же хотите нас поздравить",
     qrCodes: [
-      { src: "/images/qr1.jpg", alt: "QR-код для перевода", label: "t-bank" },
-      { src: "/images/crypto.png", alt: "QR-код для крипто-перевода", label: "crypto EVM" },
+      { src: "/images/qr1.webp", alt: "QR-код для перевода", label: "t-bank" },
+      { src: "/images/crypto.webp", alt: "QR-код для крипто-перевода", label: "crypto EVM" },
     ],
   },
   dressCode: {

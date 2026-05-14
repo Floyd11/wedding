@@ -38,7 +38,7 @@ export function EditorialDivider({ tone = "light" }: EditorialDividerProps) {
         {/* Central Shishka Ornament */}
         <div className="relative px-6 flex items-center justify-center">
           <img
-            src="/images/shishka.PNG"
+            src="/images/shishka.webp"
             alt=""
             role="presentation"
             className="h-20 md:h-28 w-auto select-none pointer-events-none drop-shadow-sm"

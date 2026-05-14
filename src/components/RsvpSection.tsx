@@ -235,7 +235,7 @@ export function RsvpSection({ guest, slug }: RsvpSectionProps) {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-deep-brown px-6 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-ivory transition hover:bg-olive-gray focus:outline-none focus-visible:ring-2 focus-visible:ring-deep-brown focus-visible:ring-offset-4 focus-visible:ring-offset-ivory disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full bg-deep-brown px-6 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-ivory transition hover:bg-olive-gray focus:outline-none focus-visible:ring-2 focus-visible:ring-deep-brown focus-visible:ring-offset-4 focus-visible:ring-offset-ivory disabled:cursor-not-allowed disabled:opacity-60 touch-manipulation"
               >
                 {isLoading ? rsvp.submitting : rsvp.submit}
               </button>

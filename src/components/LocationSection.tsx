@@ -14,7 +14,7 @@ export function LocationSection() {
         <SectionHeading title={location.title} />
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <ParallaxImage
-            src="/images/IMG521.png"
+            src="/images/IMG521.webp"
             alt={location.locationImageAlt}
             className="aspect-[16/11] shadow-[0_28px_80px_rgba(61,51,42,0.10)]"
           />

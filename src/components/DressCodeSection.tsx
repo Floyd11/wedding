@@ -43,7 +43,7 @@ export function DressCodeSection() {
           {/* Right Column: Palette Image */}
           <Reveal className="flex h-full items-center justify-center">
             <img
-              src="/images/IMG_2873.PNG"
+              src="/images/IMG_2873.webp"
               alt={dressCode.paletteAlt}
               className="h-auto w-full max-w-[450px] lg:max-w-none lg:scale-110 lg:origin-center"
               loading="lazy"

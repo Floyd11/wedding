@@ -21,14 +21,16 @@ export function HeroSection() {
   }
 
   return (
-    <header className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pt-10 pb-0">
+    <header className="relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden px-4 pt-10 pb-0">
 
       {/* ── Layer 0: Background photo ── */}
       <div className="absolute inset-0">
         <img
-          src="/images/IMG_2833.JPG"
+          src="/images/IMG_2833.webp"
           alt=""
           className="h-full w-full object-cover object-center"
+          fetchPriority="high"
+          decoding="sync"
           // Subtle desaturation makes the card pop as the focal point
           style={{ filter: "saturate(0.88) brightness(0.92)" }}
         />
@@ -89,10 +91,12 @@ export function HeroSection() {
       >
         {/* PNG ornate frame — layered cinematic shadows */}
         <img
-          src="/images/IMG_2855.PNG"
+          src="/images/IMG_2855.webp"
           alt=""
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none"
+          fetchPriority="high"
+          decoding="async"
           style={{ filter: FRAME_FILTER }}
         />
 
