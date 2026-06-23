@@ -209,4 +209,12 @@ export const guests: GuestConfig[] = [
     inviteType: "couple",
     answerOptions: coupleAnswerOptions,
   },
+  {
+    slug: "sister",
+    guestId: "guest-sister",
+    displayName: "Мария и Максим",
+    greeting: "Дорогие Мария и Максим",
+    inviteType: "couple",
+    answerOptions: coupleAnswerOptions,
+  },
 ];

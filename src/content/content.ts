@@ -32,7 +32,7 @@ export const weddingContent = {
   },
   rsvp: {
     title: "Будете ли вы на свадьбе?",
-    deadline: "Пожалуйста, дайте свой ответ до 15.06.26",
+    deadline: "Пожалуйста, дайте свой ответ до 15.07.26",
     emailLabel: "Email",
     emailPlaceholder: "name@example.com",
     plusOneLabel: "Имя гостя +1",

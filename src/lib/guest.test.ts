@@ -39,6 +39,15 @@ describe("guest fallback", () => {
     expect(guest.guestId).toBe("guest-ivanovy");
   });
 
+  it("resolves the 'sister' slug to Maria and Maxim", () => {
+    const guest = getGuestBySlug("sister");
+
+    expect(isFallbackGuest(guest)).toBe(false);
+    expect(guest.displayName).toBe("Мария и Максим");
+    expect(guest.guestId).toBe("guest-sister");
+    expect(guest.inviteType).toBe("couple");
+  });
+
   it("uses generic guest for unknown slugs", () => {
     const guest = getGuestBySlug("unknown-a1b2");
 
