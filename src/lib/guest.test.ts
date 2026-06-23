@@ -48,6 +48,15 @@ describe("guest fallback", () => {
     expect(guest.inviteType).toBe("couple");
   });
 
+  it("resolves the 'bud_kak_doma_putnik' slug to Konstantin", () => {
+    const guest = getGuestBySlug("bud_kak_doma_putnik");
+
+    expect(isFallbackGuest(guest)).toBe(false);
+    expect(guest.displayName).toBe("Константин");
+    expect(guest.guestId).toBe("guest-konstantin");
+    expect(guest.inviteType).toBe("single");
+  });
+
   it("uses generic guest for unknown slugs", () => {
     const guest = getGuestBySlug("unknown-a1b2");
 

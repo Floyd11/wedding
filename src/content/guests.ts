@@ -217,4 +217,12 @@ export const guests: GuestConfig[] = [
     inviteType: "couple",
     answerOptions: coupleAnswerOptions,
   },
+  {
+    slug: "bud_kak_doma_putnik",
+    guestId: "guest-konstantin",
+    displayName: "Константин",
+    greeting: "Дорогой Константин",
+    inviteType: "single",
+    answerOptions: singleAnswerOptions,
+  },
 ];
