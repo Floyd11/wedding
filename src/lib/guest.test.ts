@@ -57,6 +57,15 @@ describe("guest fallback", () => {
     expect(guest.inviteType).toBe("single");
   });
 
+  it("resolves the 'MishanyaAlinochka' slug to Alina and Mikhail (with case normalization)", () => {
+    const guest = getGuestBySlug("MishanyaAlinochka");
+
+    expect(isFallbackGuest(guest)).toBe(false);
+    expect(guest.displayName).toBe("Алина и Михаил");
+    expect(guest.guestId).toBe("guest-mishanya-alinochka");
+    expect(guest.inviteType).toBe("couple");
+  });
+
   it("uses generic guest for unknown slugs", () => {
     const guest = getGuestBySlug("unknown-a1b2");
 
