@@ -66,6 +66,33 @@ describe("guest fallback", () => {
     expect(guest.inviteType).toBe("couple");
   });
 
+  it("resolves the 'Aleksandra' slug to Aleksandra and Dmitry (with case normalization)", () => {
+    const guest = getGuestBySlug("Aleksandra");
+
+    expect(isFallbackGuest(guest)).toBe(false);
+    expect(guest.displayName).toBe("Александра и Дмитрий");
+    expect(guest.guestId).toBe("guest-aleksandra-dmitry");
+    expect(guest.inviteType).toBe("couple");
+  });
+
+  it("resolves the 'Foma' slug to Alexander (with case normalization)", () => {
+    const guest = getGuestBySlug("Foma");
+
+    expect(isFallbackGuest(guest)).toBe(false);
+    expect(guest.displayName).toBe("Александр");
+    expect(guest.guestId).toBe("guest-alexander-foma");
+    expect(guest.inviteType).toBe("single");
+  });
+
+  it("resolves the 'Switer' slug to Sergey (with case normalization)", () => {
+    const guest = getGuestBySlug("Switer");
+
+    expect(isFallbackGuest(guest)).toBe(false);
+    expect(guest.displayName).toBe("Сергей");
+    expect(guest.guestId).toBe("guest-sergey-switer");
+    expect(guest.inviteType).toBe("single");
+  });
+
   it("uses generic guest for unknown slugs", () => {
     const guest = getGuestBySlug("unknown-a1b2");
 
