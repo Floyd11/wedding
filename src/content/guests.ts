@@ -257,4 +257,12 @@ export const guests: GuestConfig[] = [
     inviteType: "single",
     answerOptions: singleAnswerOptions,
   },
+  {
+    slug: "iluha",
+    guestId: "guest-ilya",
+    displayName: "Илья",
+    greeting: "Дорогой Илья",
+    inviteType: "single",
+    answerOptions: singleAnswerOptions,
+  },
 ];
